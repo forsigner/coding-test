@@ -12,13 +12,7 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
-    "size": "size-limit",
-    "analyze": "size-limit --why"
+    "test": "tsx src/index.test.ts"
   },
   "peerDependencies": {},
   "husky": {
@@ -34,22 +28,10 @@
   },
   "author": "forsigner",
   "module": "dist/coding-test.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/coding-test.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/coding-test.esm.js",
-      "limit": "10 KB"
-    }
-  ],
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^8.2.4",
-    "husky": "^8.0.3",
-    "size-limit": "^8.2.4",
     "tsdx": "^0.14.1",
     "tslib": "^2.5.0",
+    "tsx": "^3.12.7",
     "typescript": "^5.0.4"
   }
 }
